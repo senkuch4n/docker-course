@@ -26,6 +26,13 @@ jobs:
         echo "Iniciando Login"
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         echo "Fin del login"
+    - name: Construccion de imagen
+      run:  |
+        docker build  -t falquito13/docker-graphql:0.0.2 .
+    - name: Push de la imagen
+      run:  |
+        docker push  falquito13/docker-graphql:0.0.2 .
+      
     
         
     #- name: Build the Docker image
