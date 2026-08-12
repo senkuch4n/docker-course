@@ -31,7 +31,7 @@ jobs:
         docker build  -t falquito13/docker-graphql:0.0.2 .
     - name: Push de la imagen
       run:  |
-        docker push  falquito13/docker-graphql:0.0.2 .
+        docker push falquito13/docker-graphql:0.0.2
       
     
         
